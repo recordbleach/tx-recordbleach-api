@@ -1,24 +1,68 @@
-# README
+CONNECTING TO TEXAS RECORDBLEACH API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+(1) POST request to https://tx-recordbleach-api.herokuapp.com/api/registrations
+     {
+        "user":{
+          "password":"sarah", 
+          "email": "sarah@swifty.com"
+        }
+    }
+ (2) POST request to https://tx-recordbleach-api.herokuapp.com/oauth/token
+    {
+         "email":"sarah@swifty.com", 
+         "password":"sarah", 
+         "grant_type":"password"
+    }
+    
+    This will return an auth key.
+    
+(3) POST petition data to https://tx-recordbleach-api.herokuapp.com/petitions 
+  header: 
+    key: "Authorization"
+    value: "Bearer c58e50df61207848e7c67aacceddf7fc9c04156678a7daaa53f49ff1a4d31af4" (plug in the auth key you get)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+   {
+    "petition": {
+      "legal_name": "NAME NAME",
+      "dob": 19850911,
+      "ssn": "222-22-2222",
+      "dl": "22222222",
+      "address": "4203 Montrose",
+      "city": "Houston",
+      "state": "Texas",
+      "county": "Harris",
+      "zip": "77006",
+      "sex": "Female",
+      "race": "White",
+      "offense_date": 20160101,
+      "offense_county": "Harris",
+      "arresting_agency": "Houston Police Department",
+      "arrest_date": 20160101,
+      "a_address": "2201 Dunstan",
+      "a_city": "Houston",
+      "a_state": "Texas",
+      "a_county": "Harris",
+      "charged": true,
+      "charge_date": 20160102,
+      "charged_offenses": "hacking justice",
+      "charge_cause_number": "123-123",
+      "county_court_at_law": false,
+      "county_court_at_law_number": null,
+      "municipal_court": false,
+      "municipal_court_name": false,
+      "district_court": true,
+      "district_court_name": "508th Judicial District",
+      "acquittal": true,
+      "acquittal_date": 20160501,
+      "dismissal": false,
+      "dismissal_date": null,
+      "convicted": false,
+      "conviction_date": null,
+      "pardon": false,
+      "pardon_date": null,
+      "overturned": false,
+      "overturned_date": null,
+      "probation": false,
+      "deferred_adjudication": false
+    }
+  }

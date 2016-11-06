@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161106165912) do
+ActiveRecord::Schema.define(version: 20161106171853) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,15 +55,58 @@ ActiveRecord::Schema.define(version: 20161106165912) do
 
   create_table "petitions", force: :cascade do |t|
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.string   "legal_name"
+    t.date     "dob"
+    t.string   "ssn"
+    t.string   "dl"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "county"
+    t.string   "zip"
+    t.string   "sex"
+    t.string   "race"
+    t.date     "offense_date"
+    t.string   "offense_county"
+    t.string   "arresting_agency"
+    t.date     "arrest_date"
+    t.string   "a_address"
+    t.string   "a_city"
+    t.string   "a_state"
+    t.string   "a_zip"
+    t.string   "a_county"
+    t.boolean  "charged"
+    t.date     "charge_date"
+    t.text     "charged_offenses"
+    t.string   "charge_cause_number"
+    t.boolean  "county_court_at_law"
+    t.string   "county_court_at_law_number"
+    t.string   "municipal_court"
+    t.string   "municipal_court_name"
+    t.boolean  "district_court"
+    t.string   "district_court_name"
+    t.boolean  "acquittal"
+    t.boolean  "dismissal"
+    t.date     "dismissal_date"
+    t.boolean  "convicted"
+    t.date     "conviction_date"
+    t.boolean  "pardon"
+    t.boolean  "overturned"
+    t.boolean  "probation"
+    t.boolean  "deferred_adjudication"
+    t.date     "pardon_date"
+    t.date     "overturned_date"
+    t.date     "acquittal_date"
     t.index ["user_id"], name: "index_petitions_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
     t.string   "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "password_digest"
   end
 
   add_foreign_key "oauth_access_grants", "oauth_applications", column: "application_id"

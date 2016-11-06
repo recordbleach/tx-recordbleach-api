@@ -1,0 +1,46 @@
+class AddAttributesToPetitions < ActiveRecord::Migration[5.0]
+  def change
+    add_column :petitions, :legal_name, :string
+    add_column :petitions, :dob, :date
+    add_column :petitions, :ssn, :string
+    add_column :petitions, :dl, :string
+    add_column :petitions, :address, :string
+    add_column :petitions, :city, :string
+    add_column :petitions, :state, :string
+    add_column :petitions, :county, :string
+    add_column :petitions, :zip, :string
+    add_column :petitions, :sex, :string
+    add_column :petitions, :race, :string
+    add_column :petitions, :offense_date, :date
+    add_column :petitions, :offense_county, :string
+    add_column :petitions, :arresting_agency, :string
+    add_column :petitions, :arrest_date, :date
+    add_column :petitions, :a_address, :string
+    add_column :petitions, :a_city, :string
+    add_column :petitions, :a_state, :string
+    add_column :petitions, :a_zip, :string
+    add_column :petitions, :a_county, :string
+    add_column :petitions, :charged, :boolean
+    add_column :petitions, :charge_date, :date
+    add_column :petitions, :charged_offenses, :text
+    add_column :petitions, :charge_cause_number, :string
+    add_column :petitions, :county_court_at_law, :boolean
+    add_column :petitions, :county_court_at_law_number, :string
+    add_column :petitions, :municipal_court, :string
+    add_column :petitions, :municipal_court_name, :string
+    add_column :petitions, :district_court, :boolean
+    add_column :petitions, :district_court_name, :string
+    add_column :petitions, :acquittal, :boolean
+    add_column :petitions, :dismissal, :boolean
+    add_column :petitions, :dismissal_date, :date
+    add_column :petitions, :convicted, :boolean
+    add_column :petitions, :conviction_date, :date
+    add_column :petitions, :pardon, :boolean
+    add_column :petitions, :overturned, :boolean
+    add_column :petitions, :probation, :boolean
+    add_column :petitions, :deferred_adjudication, :boolean
+    add_column :petitions, :pardon_date, :date
+    add_column :petitions, :overturned_date, :date
+    add_column :petitions, :acquittal_date, :date
+  end
+end

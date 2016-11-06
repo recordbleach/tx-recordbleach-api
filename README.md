@@ -76,3 +76,4 @@ CONNECTING TO TEXAS RECORDBLEACH API
 ```
 (4) GET petition JSON data via https://tx-recordbleach-api.herokuapp.com/api/petitions/id
 (5) GET PDF petition via https://tx-recordbleach-api.herokuapp.com/api/petitions/id.pdf
+(6) Final petition looks like this: https://github.com/recordbleach/tx-recordbleach-api/blob/master/download.pdf

@@ -1,26 +1,30 @@
 CONNECTING TO TEXAS RECORDBLEACH API
 
 (1) POST request to https://tx-recordbleach-api.herokuapp.com/api/registrations
+```
      {
         "user":{
           "password":"sarah", 
           "email": "sarah@swifty.com"
         }
     }
+    ```
+    <br>
  (2) POST request to https://tx-recordbleach-api.herokuapp.com/oauth/token
+ ```
     {
          "email":"sarah@swifty.com", 
          "password":"sarah", 
          "grant_type":"password"
     }
-    
+    ```
     This will return an auth key.
-    
+    <br>
 (3) POST petition data to https://tx-recordbleach-api.herokuapp.com/petitions 
   header: 
     key: "Authorization"
     value: "Bearer c58e50df61207848e7c67aacceddf7fc9c04156678a7daaa53f49ff1a4d31af4" (plug in the auth key you get)
-
+```
    {
     "petition": {
       "legal_name": "NAME NAME",
@@ -65,4 +69,4 @@ CONNECTING TO TEXAS RECORDBLEACH API
       "probation": false,
       "deferred_adjudication": false
     }
-  }
+  }```

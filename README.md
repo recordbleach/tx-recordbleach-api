@@ -9,7 +9,8 @@ CONNECTING TO TEXAS RECORDBLEACH API
         }
     }
     ```
-    <br>
+
+
  (2) POST request to https://tx-recordbleach-api.herokuapp.com/oauth/token
  ```
     {
@@ -19,7 +20,9 @@ CONNECTING TO TEXAS RECORDBLEACH API
     }
     ```
     This will return an auth key.
-    <br>
+
+
+
 (3) POST petition data to https://tx-recordbleach-api.herokuapp.com/petitions 
   header: 
     key: "Authorization"
@@ -42,7 +45,7 @@ CONNECTING TO TEXAS RECORDBLEACH API
       "offense_county": "Harris",
       "arresting_agency": "Houston Police Department",
       "arrest_date": 20160101,
-      "a_address": "2201 Dunstan",
+      "a_address": "4203 Montrose",
       "a_city": "Houston",
       "a_state": "Texas",
       "a_county": "Harris",

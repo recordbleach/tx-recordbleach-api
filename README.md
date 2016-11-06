@@ -72,4 +72,7 @@ CONNECTING TO TEXAS RECORDBLEACH API
       "probation": false,
       "deferred_adjudication": false
     }
-  }```
+  }
+```
+(4) GET petition JSON data via https://tx-recordbleach-api.herokuapp.com/api/petitions/id
+(5) GET PDF petition via https://tx-recordbleach-api.herokuapp.com/api/petitions/id.pdf

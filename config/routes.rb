@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'home/welcome'
+  root 'home#welcome'
+
   use_doorkeeper
   namespace :api do
     get 'petitions' => 'petitions#index'
@@ -16,5 +19,6 @@ Rails.application.routes.draw do
     get 'users/:id' => 'users#show'
     get 'me' => 'users#me'
     delete 'me' => 'users#delete'
+
   end
 end

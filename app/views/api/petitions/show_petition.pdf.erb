@@ -1,4 +1,4 @@
-
+<%= wicked_pdf_stylesheet_link_tag "petition" -%>
 <body>
   <div class="header">
     <div class="cause_number">
@@ -11,12 +11,10 @@
         <h2>AN ADULT</h2>
       </div>
       <div class="divider">
-        <h2>§</h2>
-        <h2>§</h2>
-        <h2>§</h2>
-        <h2>§</h2>
-        <h2>§</h2>
-        <h2>§</h2>
+
+        <h2>&#xa7;</h2>
+        <h2>&#xa7;</h2>
+        <h2>&#xa7;</h2>
       </div>
       <div class="caption right">
         <h2>IN THE DISTRICT COURT</h2>
@@ -31,20 +29,20 @@
   </div>
   <div class="body">
     <p>
-      Now comes, <%= @petition.legal_name%>, Petitioner, requests that the Court issue an order expunging all documents, records, and references arising from Petitioner's conviction/charge/arrest for <%@petition.charged_offenses%> and release Petitioner from all disabilities resulting from said conviction/charge/arrest.  In support, Petitioner shows the following:
+      Now comes, <%= @petition.legal_name%>, Petitioner, requests that the Court issue an order expunging all documents, records, and references arising from Petitioner&#39s conviction/charge/arrest for <%@petition.charged_offenses%> and release Petitioner from all disabilities resulting from said conviction/charge/arrest.  In support, Petitioner shows the following:
     </p>
     <ol>
       <li>This Petition is brought pursuant to Article 55.01 of the Texas Code of Criminal Procedure.</li>
       <li>This Court has jurisdiction over this matter as this charge/conviction/arrest and or all facts giving rise to this Petition occurred in <%= @petition.offense_county %></li> County, Texas.
-      <li>Petitioner's Identifying Information</li>
+      <li>Petitioner&#39s Identifying Information</li>
       <ul>
         <li>Name: <%=@petition.legal_name%></li>
         <li>Date of Birth: <%=@petition.dob%></li>
         <li>Race: <%=@petition.race%></li>
         <li>Sex: <%=@petition.sex%></li>
-        <li>Address at Time of Arrest: <%=@petition.a_address %>, <%=@petition.a_city %>, <%=@petition.a_state %> <%=@petition.a_county %>, <%=@petition.a_zip %></li>
-        <li>Current Address: <%=@petition.address %> <%=@petition.city %>, <%=@petition.county %></li>
-        <li>Driver's License: <%=@petition.dl %></li>
+        <li>Address at Time of Arrest: <%=@petition.a_address %>, <%=@petition.a_city %>, <%=@petition.a_state %> <%=@petition.a_county %> County, <%=@petition.a_zip %></li>
+        <li>Current Address: <%=@petition.address %> <%=@petition.city %>, <%=@petition.a_state %> <%=@petition.county %> County, <%=@petition.zip %></li>
+        <li>Driver&#39s License: <%=@petition.dl %></li>
         <li>Social Security Number: <%=@petition.ssn %></li>
       </ul>
       <li>On or about <%=@petition.arrest_date %>, Petitioer was arrested by <%=@petition.arresting_agency%> for <%=@petition.charged_offenses%>.</li>
@@ -61,11 +59,11 @@
       <ul>
         <li>All applicable agencies to return all records and files concerning the subject arrest, charge and/or conviction to this Court, or if removal and return is not practical, to destroy all portions of the records or files that identify the Petitioner including, but not limited to, all computer entries and notify this Court of same;</li>
         <li>All applicable agencies to delete from their records all index references to the records and files that are subject to this Order;</li>
-        <li>The District Clerk be ordered not to permit inspection of the court records concerning this expunction proceeding by any person other that the Petitioner herein or Petitioner’s attorney, and to destroy all public references to this proceeding and maintain all other records in an area not open to inspection;</li>
-        <li>The Clerk, upon request, to deliver to Petitioner or Petitioner’s attorney all files and records returned to the clerk pursuant to the Court’s Order;</li>
-        <li>The District Clerk to destroy all such files and records returned to the clerk pursuant to the Court’s Order on the first anniversary of the date the order for expunction was issued unless the Petitioner has requested the return of the records;</li>
+        <li>The District Clerk be ordered not to permit inspection of the court records concerning this expunction proceeding by any person other that the Petitioner herein or Petitioner&#39s attorney, and to destroy all public references to this proceeding and maintain all other records in an area not open to inspection;</li>
+        <li>The Clerk, upon request, to deliver to Petitioner or Petitioner&#39s attorney all files and records returned to the clerk pursuant to the Court&#39s Order;</li>
+        <li>The District Clerk to destroy all such files and records returned to the clerk pursuant to the Court&#39s Order on the first anniversary of the date the order for expunction was issued unless the Petitioner has requested the return of the records;</li>
         <li>Petitioner be allowed to deny the occurrence of the expunged arrest and prosecution and the expunction proceedings and order;</li>
-        <li>The Department of Public Safety to send a copy of this Order, via certified mail return receipt requested, to the appropriate federal depository of criminal records that there is reason to believe may have any records subject to the Court’s Order, together with any explanation of the effect of the Court’s Order and a request that the records in possession of the depository, including any information with respect to this proceeding, be destroyed, deleted or returned to the Court.</li>
+        <li>The Department of Public Safety to send a copy of this Order, via certified mail return receipt requested, to the appropriate federal depository of criminal records that there is reason to believe may have any records subject to the Court&#39s Order, together with any explanation of the effect of the Court&#39s Order and a request that the records in possession of the depository, including any information with respect to this proceeding, be destroyed, deleted or returned to the Court.</li>
       </ul>
     </ol>
     <p>

@@ -1,0 +1,45 @@
+.header{}
+
+.cause_number{
+  text-align: center;
+}
+
+.caption_container{
+
+  display:flex;
+ flex-direction: row;
+ flex-wrap: nowrap;
+ justify-content: center;
+ align-content: space-around;
+ align-items: flex-start;
+
+}
+.caption{
+  width: 38%;
+  display:inline-block;
+  margin:2%;
+}
+.left{
+  text-align: left;
+}
+.right{
+  text-align: right;
+}
+.divider{
+  width: 10%;
+  display:inline-block;
+  text-align: center;
+}
+
+.title{
+  text-align: center; 
+}
+
+h1{
+  font-size: 1.2rem;
+}
+h2{
+  font-size: 1rem;
+}
+h3{}
+p{}

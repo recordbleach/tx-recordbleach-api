@@ -1,0 +1,108 @@
+
+<body>
+  <div class="header">
+    <div class="cause_number">
+      <h1>No. ___________</h1>
+    </div>
+    <div class="caption_container">
+      <div class="caption left">
+        <h2>EX PARTE</h2>
+        <h2><%= @petition.legal_name%>, </h2>
+        <h2>AN ADULT</h2>
+      </div>
+      <div class="divider">
+        <h2>§</h2>
+        <h2>§</h2>
+        <h2>§</h2>
+        <h2>§</h2>
+        <h2>§</h2>
+        <h2>§</h2>
+      </div>
+      <div class="caption right">
+        <h2>IN THE DISTRICT COURT</h2>
+        <h2>_____ JUDICIAL DISTRICT</h2>
+        <h2>OF <%= @petition.county.upcase%> COUNTY, TEXAS</h2>
+      </div>
+    </div>
+
+  </div>
+  <div class="title">
+    <h1>PETITION FOR EXPUNCTION OF RECORDS</h1>
+  </div>
+  <div class="body">
+    <p>
+      Now comes, <%= @petition.legal_name%>, Petitioner, requests that the Court issue an order expunging all documents, records, and references arising from Petitioner's conviction/charge/arrest for <%@petition.charged_offenses%> and release Petitioner from all disabilities resulting from said conviction/charge/arrest.  In support, Petitioner shows the following:
+    </p>
+    <ol>
+      <li>This Petition is brought pursuant to Article 55.01 of the Texas Code of Criminal Procedure.</li>
+      <li>This Court has jurisdiction over this matter as this charge/conviction/arrest and or all facts giving rise to this Petition occurred in <%= @petition.offense_county %></li> County, Texas.
+      <li>Petitioner's Identifying Information</li>
+      <ul>
+        <li>Name: <%=@petition.legal_name%></li>
+        <li>Date of Birth: <%=@petition.dob%></li>
+        <li>Race: <%=@petition.race%></li>
+        <li>Sex: <%=@petition.sex%></li>
+        <li>Address at Time of Arrest: <%=@petition.a_address %>, <%=@petition.a_city %>, <%=@petition.a_state %> <%=@petition.a_county %>, <%=@petition.a_zip %></li>
+        <li>Current Address: <%=@petition.address %> <%=@petition.city %>, <%=@petition.county %></li>
+        <li>Driver's License: <%=@petition.dl %></li>
+        <li>Social Security Number: <%=@petition.ssn %></li>
+      </ul>
+      <li>On or about <%=@petition.arrest_date %>, Petitioer was arrested by <%=@petition.arresting_agency%> for <%=@petition.charged_offenses%>.</li>
+      <li>On or about  <%=@petition.charge_date%>, Petitioner was charged with <%=@petition.charged_offenses%>.</li>
+      <li>The Cause Number relating to this charge is <%=@petition.charge_cause_number %> and was brought in the <%=@petition.district_court_name %>of <%=@petition.county %> County.  </li>
+      <li>NEVER CHARGED - DISMISSED - ACQUITTAL - PARDON</li>
+      <li>CIRCUMSTANCES</li>
+      <li>The following police agencies have information concerning the charge:</li>
+      <ul>
+        AGENCIES
+      </ul>
+      <li>For the reasons stated herein, Petitioner is entitled to a court order ordering all of the agencies listed above to expunge all records related to the subject arrest and/or charge and/or conviction.</li>
+      <li>Petitioner requests that the Court set this matter for hearing, notice the interested state agencies entitled to notice under Article 55.02, Section 2, of the Texas Code of Criminal Procedure and order the following:</li>
+      <ul>
+        <li>All applicable agencies to return all records and files concerning the subject arrest, charge and/or conviction to this Court, or if removal and return is not practical, to destroy all portions of the records or files that identify the Petitioner including, but not limited to, all computer entries and notify this Court of same;</li>
+        <li>All applicable agencies to delete from their records all index references to the records and files that are subject to this Order;</li>
+        <li>The District Clerk be ordered not to permit inspection of the court records concerning this expunction proceeding by any person other that the Petitioner herein or Petitioner’s attorney, and to destroy all public references to this proceeding and maintain all other records in an area not open to inspection;</li>
+        <li>The Clerk, upon request, to deliver to Petitioner or Petitioner’s attorney all files and records returned to the clerk pursuant to the Court’s Order;</li>
+        <li>The District Clerk to destroy all such files and records returned to the clerk pursuant to the Court’s Order on the first anniversary of the date the order for expunction was issued unless the Petitioner has requested the return of the records;</li>
+        <li>Petitioner be allowed to deny the occurrence of the expunged arrest and prosecution and the expunction proceedings and order;</li>
+        <li>The Department of Public Safety to send a copy of this Order, via certified mail return receipt requested, to the appropriate federal depository of criminal records that there is reason to believe may have any records subject to the Court’s Order, together with any explanation of the effect of the Court’s Order and a request that the records in possession of the depository, including any information with respect to this proceeding, be destroyed, deleted or returned to the Court.</li>
+      </ul>
+    </ol>
+    <p>
+      Petitioner prays, after proper notice and hearing, that the Court grant Petitioner request for expunction and for all other relief to which Petitioner may be justly entitled.
+    </p>
+    <p>
+      Petitioner prays for general relief.
+    </p>
+    <p>
+      Respectfully submitted,
+    </p>
+    <br>
+    <p>I, <%= @petition.legal_name%>, Petitioner, swear under oath that the facts stated in the above Petition for Expunction of Records are true and correct</p>
+  <div class="signature">
+    <p>
+      ___________________________
+    </p>
+  </div>
+
+<div class="notice_of_hearing">
+  <h2>Notice of Hearing</h2>
+  <p>
+    This matter is set for hearing on ___________ at ____.M. in ______th Judicial District Court of <%=@petition.county%> County, Texas.
+  </p>
+  <p>
+    SIGNED on_____________________________________.
+  </p>
+  <div class="signature">
+    <p>
+      ___________________________
+    </p>
+    <p>
+      Judge or Clerk
+    </p>
+  </div>
+
+</div>
+
+  </div>
+</body>

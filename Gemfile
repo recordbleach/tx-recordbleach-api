@@ -18,6 +18,9 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'rack-cors', :require => 'rack/cors'
+
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 

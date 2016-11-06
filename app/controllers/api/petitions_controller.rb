@@ -10,9 +10,15 @@ class Api::PetitionsController < ApplicationController
     # add sorting by date
   end
 
-  def show
+  def show_petition
     @petition = Petition.find_by id: params[:id]
+        render pdf: "petition_for_expunction"   # Excluding ".pdf" extension.
   end
+
+  def show
+     @petition = Petition.find_by id: params[:id]
+  end
+
 
   def create
     @petition = Petition.create(petition_params)

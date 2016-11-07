@@ -12,7 +12,7 @@ class Api::PetitionsController < ApplicationController
 
   def show_petition
     @petition = Petition.find_by id: params[:id]
-        render pdf: "petition_for_expunction"   # Excluding ".pdf" extension.
+        render pdf: "petition_for_expunction", status: 201   # Excluding ".pdf" extension.
   end
 
   def show
@@ -23,7 +23,7 @@ class Api::PetitionsController < ApplicationController
   def create
     @petition = Petition.create(petition_params)
     if @petition.save
-      render :show
+      render :show, status: 201
     else
       render json: @petition.errors, status: 422
     end

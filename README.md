@@ -6,8 +6,8 @@ Replace all of the following with relevant data.
 ```
      {
         "user":{
-          "password":"*sarah*", 
-          "email": "*sarah@swifty.com*"
+          "password":"sarah", 
+          "email": "sarah@swifty.com"
         }
     }
 ```   
@@ -16,8 +16,8 @@ Replace all of the following with relevant data.
 2. Sign In via **POST** request to https://tx-recordbleach-api.herokuapp.com/oauth/token
 ``` 
     {
-         "email":"*sarah@swifty.com*", 
-         "password":"*sarah*", 
+         "email":"sarah@swifty.com", 
+         "password":"sarah", 
          "grant_type":"password"
       }
 ```
@@ -29,52 +29,52 @@ Replace all of the following with relevant data.
 ```
   header: 
     key: "Authorization"
-    value: "Bearer *c58e50df61207848e7c67aacceddf7fc9c04156678a7daaa53f49ff1a4d31af4*"   
+    value: "Bearer c58e50df61207848e7c67aacceddf7fc9c04156678a7daaa53f49ff1a4d31af4"   
 ```
 ```
    {
     "petition": {
-      "legal_name": "*SARAH SWIFT*",
-      "dob": *19850911*,
-      "ssn": "*222-22-2222*",
-      "dl": "*22222222*",
-      "address": "*4203 Montrose*",
-      "city": "*Houston*",
-      "state": "*Texas*",
-      "county": "*Harris*",
-      "zip": "*77006*",
-      "sex": "*Female*",
-      "race": "*White*",
-      "offense_date": *20160101*,
-      "offense_county": "*Harris*",
-      "arresting_agency": "*Houston Police Department*",
-      "arrest_date": *20160101*,
-      "a_address": "*4203 Montrose*",
-      "a_city": "*Houston*",
-      "a_state": "*Texas*",
-      "a_county": "*Harris*",
-      "charged": *true*,
-      "charge_date": *20160102*,
-      "charged_offenses": "*hacking justice*",
-      "charge_cause_number": "*123-123*",
-      "county_court_at_law": *false*,
-      "county_court_at_law_number": *null*,
-      "municipal_court": *false*,
-      "municipal_court_name": *false*,
-      "district_court": *true*,
-      "district_court_name": "*508th Judicial District*",
-      "acquittal": *true*,
-      "acquittal_date": *20160501*,
-      "dismissal": *false*,
-      "dismissal_date": *null*,
-      "convicted": *false*,
-      "conviction_date": *null*,
-      "pardon": *false*,
-      "pardon_date": *null*,
-      "overturned": *false*,
-      "overturned_date": *null*,
-      "probation": *false*,
-      "deferred_adjudication": *false*
+      "legal_name": "SARAH SWIFT",
+      "dob": 19850911,
+      "ssn": "222-22-2222",
+      "dl": "22222222",
+      "address": "4203 Montrose",
+      "city": "Houston",
+      "state": "Texas",
+      "county": "Harris",
+      "zip": "77006",
+      "sex": "Female",
+      "race": "White",
+      "offense_date": 20160101,
+      "offense_county": "Harris",
+      "arresting_agency": "Houston Police Department",
+      "arrest_date": 20160101,
+      "a_address": "4203 Montrose",
+      "a_city": "Houston",
+      "a_state": "Texas",
+      "a_county": "Harris",
+      "charged": true,
+      "charge_date": 20160102,
+      "charged_offenses": "hacking justice",
+      "charge_cause_number": "123-123",
+      "county_court_at_law": false,
+      "county_court_at_law_number": null,
+      "municipal_court": false,
+      "municipal_court_name": false,
+      "district_court": true,
+      "district_court_name": "508th Judicial District",
+      "acquittal": true,
+      "acquittal_date": 20160501,
+      "dismissal": false,
+      "dismissal_date": null,
+      "convicted": false,
+      "conviction_date": null,
+      "pardon": false,
+      "pardon_date": null,
+      "overturned": false,
+      "overturned_date": null,
+      "probation": false,
+      "deferred_adjudication": false
     }
   }
 ```

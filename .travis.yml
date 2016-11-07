@@ -14,4 +14,4 @@ deploy:
   on:
     repo: recordbleach/tx-recordbleach-api
   run:
-    - "rake db:migrate"
+      - "rake db:migrate"

@@ -1,11 +1,13 @@
 #CONNECTING TO TEXAS RECORDBLEACH API
 
+Replace all of the following with relevant data. 
+
 1. Sign Up via **POST** request to https://tx-recordbleach-api.herokuapp.com/api/registrations
     
      {
         "user":{
-          "password":"sarah", 
-          "email": "sarah@swifty.com"
+          "password":"*sarah*", 
+          "email": "*sarah@swifty.com*"
         }
     }
     
@@ -14,8 +16,8 @@
 2. Sign In via **POST** request to https://tx-recordbleach-api.herokuapp.com/oauth/token
     
     {
-         "email":"sarah@swifty.com", 
-         "password":"sarah", 
+         "email":"*sarah@swifty.com*", 
+         "password":"*sarah*", 
          "grant_type":"password"
     
     This will return an auth key.
@@ -26,32 +28,32 @@
     
   header: 
     key: "Authorization"
-    value: "Bearer c58e50df61207848e7c67aacceddf7fc9c04156678a7daaa53f49ff1a4d31af4" (plug in the auth key you get)    
+    value: "Bearer *c58e50df61207848e7c67aacceddf7fc9c04156678a7daaa53f49ff1a4d31af4*"   
     
    {
     "petition": {
-      "legal_name": "NAME NAME",
-      "dob": 19850911,
-      "ssn": "222-22-2222",
-      "dl": "22222222",
-      "address": "4203 Montrose",
-      "city": "Houston",
-      "state": "Texas",
-      "county": "Harris",
-      "zip": "77006",
-      "sex": "Female",
-      "race": "White",
-      "offense_date": 20160101,
-      "offense_county": "Harris",
-      "arresting_agency": "Houston Police Department",
-      "arrest_date": 20160101,
+      "legal_name": "*NAME NAME*",
+      "dob": *19850911*,
+      "ssn": "*222-22-2222*",
+      "dl": "*22222222*",
+      "address": "*4203 Montrose*",
+      "city": "*Houston*",
+      "state": "*Texas*",
+      "county": "*Harris*",
+      "zip": "*77006*",
+      "sex": "*Female*",
+      "race": "*White*",
+      "offense_date": *20160101*,
+      "offense_county": "*Harris*",
+      "arresting_agency": "*Houston Police Department*",
+      "arrest_date": *20160101*,
       "a_address": "4203 Montrose",
-      "a_city": "Houston",
-      "a_state": "Texas",
-      "a_county": "Harris",
-      "charged": true,
-      "charge_date": 20160102,
-      "charged_offenses": "hacking justice",
+      "a_city": "*Houston*",
+      "a_state": "*Texas*",
+      "a_county": "*Harris*",
+      "charged": *true*,
+      "charge_date": *20160102*,
+      "charged_offenses": "*hacking justice*",
       "charge_cause_number": "123-123",
       "county_court_at_law": false,
       "county_court_at_law_number": null,

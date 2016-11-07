@@ -24,7 +24,6 @@ Replace all of the following with relevant data.
     This will return an auth key.
 
 
-
 3. Submit petition form data via **POST** to https://tx-recordbleach-api.herokuapp.com/petitions 
 ```
   header: 

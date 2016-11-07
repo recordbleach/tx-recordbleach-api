@@ -6,3 +6,12 @@ addons:
 before_script:
 - psql -c 'create database travis_ci_test;' -U postgres
 - cp config/database.yml.travis config/database.yml
+deploy:
+  provider: heroku
+  api_key:
+    secure: Ival6c5/vVxysAMwej7eAN96CcAUVKhelPAAjBUMVUjRD2FlCmAiIL+neR/vtcCKpcfyldML/TEr9FfdTMDNJR+RECVO0v49UoswkGHAEovneuXR3SUx2krRA1vHd+u8E7yMPUOMf6Mfk02nRWOA9mQswVTGCcpVL2V1E01cF3HtTXG7m96d/eMdcCyOjU29zsPn5aHd//orN5Qm4RPd5qg+UHZAWeinzxhx9SwsK2zfv3/3pVlyAghE+NeeTObG47fMPKgW26bTvvPdORASXG4XfKnim4l+k9bYPb8z3GE+5CDz2mTK1/cjzrFNgKbDjj2/W7ac2AxPgJ84QHSZbZDxrywID4+qK0xlR1T/JOURf6JWfi6wl7XoNLNO2HpKFOYmzD9A5XplK2eRZAYKagmn8VQ31VV4q2VxTbkq2JCccFt62oSMYZzWSauiw1XW0iZMbX5xdrpjw0PA+pH9ba4d5vizFjBR8TI3KoBb74ebX0CPwh4A9DdaQIP+UPRqytBN3Wux2tqZ31W4MW+fRsUauDiZ0bAqscINhaxNQLOHSrMPa9A4Cj2XISNcsOUDFBYn9ZFrC9q6SCCoX04Z1dUfqUtjyAh1Qy0DYwjizJ1rOGXpoeEPi1yMboiWZwSFOJNh4VgDFvC6nptRXA0hf2NQX2jHKCjS6Zw5jRmu93I=
+  app: tx-recordbleach-api
+  on:
+    repo: recordbleach/tx-recordbleach-api
+  run:
+    - "rake db:migrate"

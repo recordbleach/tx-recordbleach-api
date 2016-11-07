@@ -1,33 +1,33 @@
-CONNECTING TO TEXAS RECORDBLEACH API
+#CONNECTING TO TEXAS RECORDBLEACH API
 
-(1) POST request to https://tx-recordbleach-api.herokuapp.com/api/registrations
-```
+1. Sign Up via **POST** request to https://tx-recordbleach-api.herokuapp.com/api/registrations
+    
      {
         "user":{
           "password":"sarah", 
           "email": "sarah@swifty.com"
         }
     }
-    ```
+    
 
 
- (2) POST request to https://tx-recordbleach-api.herokuapp.com/oauth/token
- ```
+2. Sign In via **POST** request to https://tx-recordbleach-api.herokuapp.com/oauth/token
+    
     {
          "email":"sarah@swifty.com", 
          "password":"sarah", 
          "grant_type":"password"
-    }
-    ```
+    
     This will return an auth key.
 
 
 
-(3) POST petition data to https://tx-recordbleach-api.herokuapp.com/petitions 
+3. Submit petition form data via **POST** to https://tx-recordbleach-api.herokuapp.com/petitions 
+    
   header: 
     key: "Authorization"
-    value: "Bearer c58e50df61207848e7c67aacceddf7fc9c04156678a7daaa53f49ff1a4d31af4" (plug in the auth key you get)
-```
+    value: "Bearer c58e50df61207848e7c67aacceddf7fc9c04156678a7daaa53f49ff1a4d31af4" (plug in the auth key you get)    
+    
    {
     "petition": {
       "legal_name": "NAME NAME",
@@ -73,7 +73,7 @@ CONNECTING TO TEXAS RECORDBLEACH API
       "deferred_adjudication": false
     }
   }
-```
-(4) GET petition JSON data via https://tx-recordbleach-api.herokuapp.com/api/petitions/id
-(5) GET PDF petition via https://tx-recordbleach-api.herokuapp.com/api/petitions/id.pdf
-(6) Final petition looks like this: https://github.com/recordbleach/tx-recordbleach-api/blob/master/download.pdf
+    
+4. **GET** petition JSON data via https://tx-recordbleach-api.herokuapp.com/api/petitions/id
+5. **GET** PDF petition via https://tx-recordbleach-api.herokuapp.com/api/petitions/id.pdf
+6. **Example:** Final petition looks like this: https://github.com/recordbleach/tx-recordbleach-api/blob/master/download.pdf

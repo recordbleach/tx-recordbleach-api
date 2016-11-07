@@ -1,8 +1,25 @@
 #CONNECTING TO TEXAS RECORDBLEACH API
 
-Replace all of the following with relevant data. 
+RecordBleach is a tool that enables Texans to prepare necessary court documents for expunction of certain arrests, charge, and convictions. RecordBleach is an open source project, and you are welcome to contribute! 
 
-1. Sign Up via **POST** request to https://tx-recordbleach-api.herokuapp.com/api/registrations
+The project has 2 apps: a Rails API that handles the data and document generation. This is the repo for the Rals API. The front end is a React based app hosted at https://github.com/recordbleach/recordBleach_front_end. Decoupling the front end and backend was a design choice that allowed members of a TechForJustice hackathon team to fully contribute without tripping over tooling. 
+
+Back End Tech:
+     * Ruby 2.3.1
+     * Rails 5
+     * Gems
+          * doorkeeper
+          * bcrypt
+          * rack-cors
+          * jbuilder
+          * wicked_pdf
+          * wkhtmltopdf-binary
+     * PostgreSQL
+     * OAuth
+
+  
+
+##Sign Up via **POST** request to https://tx-recordbleach-api.herokuapp.com/api/registrations
 ```
      {
         "user":{
@@ -13,7 +30,7 @@ Replace all of the following with relevant data.
 ```   
 
 
-2. Sign In via **POST** request to https://tx-recordbleach-api.herokuapp.com/oauth/token
+## Sign In via **POST** request to https://tx-recordbleach-api.herokuapp.com/oauth/token
 ``` 
     {
          "email":"sarah@swifty.com", 
@@ -24,7 +41,7 @@ Replace all of the following with relevant data.
     This will return an auth key.
 
 
-3. Submit petition form data via **POST** to https://tx-recordbleach-api.herokuapp.com/petitions 
+## Submit petition form data via **POST** to https://tx-recordbleach-api.herokuapp.com/petitions 
 ```
   header: 
     key: "Authorization"
@@ -77,6 +94,6 @@ Replace all of the following with relevant data.
     }
   }
 ```
-4. **GET** petition JSON data via https://tx-recordbleach-api.herokuapp.com/api/petitions/id
-5. **GET** PDF petition via https://tx-recordbleach-api.herokuapp.com/api/petitions/id.pdf
-6. **Example:** Final petition looks like this: https://github.com/recordbleach/tx-recordbleach-api/blob/master/download.pdf
+## **GET** petition JSON data via https://tx-recordbleach-api.herokuapp.com/api/petitions/id
+## **GET** PDF petition via https://tx-recordbleach-api.herokuapp.com/api/petitions/id.pdf
+### **Example:** Final petition looks like this: https://github.com/recordbleach/tx-recordbleach-api/blob/master/download.pdf

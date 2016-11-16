@@ -8,7 +8,7 @@ Doorkeeper.configure do
 
   access_token_methods :from_bearer_authorization,:from_access_token_param, :from_bearer_param
 
-
+  use_refresh_token
   grant_flows %w(password)
 
 end

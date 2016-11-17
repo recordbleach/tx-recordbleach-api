@@ -17,7 +17,7 @@ class Api::PetitionsController < ApplicationController
 
   def show
      @petition = Petition.find_by id: params[:id]
-     render :json 
+     render json: @petition.errors, status: 422
   end
 
 

@@ -12,12 +12,14 @@ gem 'doorkeeper'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'rswag' 
+gem 'rswag'
 gem 'bcrypt', '~> 3.1.7'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'rack-cors', :require => 'rack/cors'
+gem 'rails_12factor'
+
 
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'

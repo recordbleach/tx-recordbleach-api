@@ -1,6 +1,6 @@
 class Api::PetitionsController < ApplicationController
 
-  before_action :doorkeeper_authorize!
+  # before_action :doorkeeper_authorize!
 
   def index
     @petitions = Petition.all

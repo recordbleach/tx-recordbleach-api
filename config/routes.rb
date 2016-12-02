@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     patch 'petitions/:id' => 'petitions#update'
     delete 'petitions/:id' => 'petitions#delete'
     post 'registrations' => 'registrations#create'
+    post 'signout' => 'registrations#delete'
 
     get 'petitions/:id'=> 'petitions#show'
 
@@ -23,4 +24,12 @@ Rails.application.routes.draw do
     delete 'me' => 'users#delete'
 
   end
+
+  get 'sign_in' => 'sessions#new', as: :sign_in
+  post 'sign_in' => 'sessions#create'
+  delete 'sign_in' => 'sessions#delete', as: :end_session
+  get 'sign_out' => 'sessions#delete', as: :sign_out
+    
 end
+
+

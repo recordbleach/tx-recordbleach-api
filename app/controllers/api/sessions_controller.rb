@@ -7,7 +7,6 @@ class Api::SessionsController < ApplicationController
 
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to root_path, notice: "Signed in!"
     else
       flash.now[:alert] = "Something is wrong with your credentials"
       render :new
@@ -16,7 +15,6 @@ class Api::SessionsController < ApplicationController
 
   def delete
     session.delete :user_id
-    redirect_to root_path, notice: "Signed Out!"
   end
 
 

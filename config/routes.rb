@@ -23,13 +23,13 @@ Rails.application.routes.draw do
     get 'me' => 'users#me'
     delete 'me' => 'users#delete'
 
+
+      get 'sign_in' => 'sessions#new', as: :sign_in
+      post 'sign_in' => 'sessions#create'
+      delete 'sign_in' => 'sessions#delete', as: :end_session
+      get 'sign_out' => 'sessions#delete', as: :sign_out
+        
+
   end
 
-  get 'sign_in' => 'sessions#new', as: :sign_in
-  post 'sign_in' => 'sessions#create'
-  delete 'sign_in' => 'sessions#delete', as: :end_session
-  get 'sign_out' => 'sessions#delete', as: :sign_out
-    
 end
-
-

@@ -1,4 +1,4 @@
-class SessionsController < ApplicationController
+class Api::SessionsController < ApplicationController
   def new
   end
 
@@ -16,8 +16,6 @@ class SessionsController < ApplicationController
 
   def delete
     session.delete :user_id
-    session.delete :user_role
-    session.delete :matter_id
     redirect_to root_path, notice: "Signed Out!"
   end
 

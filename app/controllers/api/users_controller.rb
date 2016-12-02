@@ -9,7 +9,7 @@ class Api::UsersController < ApplicationController
   end
 
   def me
-
+  
     @user = current_resource_owner
     render "api/registrations/user"
   end

@@ -7,6 +7,7 @@ class Api::SessionsController < ApplicationController
 
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
+      render :user
     else
       flash.now[:alert] = "Something is wrong with your credentials"
       render :new

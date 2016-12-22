@@ -20,6 +20,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'rails_12factor'
 gem 'dynopoker'
+gem 'faker'
 
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
